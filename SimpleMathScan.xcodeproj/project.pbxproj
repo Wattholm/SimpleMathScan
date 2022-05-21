@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		12760A0928390037000C88F3 /* SimpleMathScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMathScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		12760A0928390037000C88F3 /* SimpleMathScan Debug Green Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleMathScan Debug Green Camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12760A0C28390037000C88F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12760A0E28390037000C88F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		12760A1028390037000C88F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		12760A0A28390037000C88F3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12760A0928390037000C88F3 /* SimpleMathScan.app */,
+				12760A0928390037000C88F3 /* SimpleMathScan Debug Green Camera.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			);
 			name = SimpleMathScan;
 			productName = SimpleMathScan;
-			productReference = 12760A0928390037000C88F3 /* SimpleMathScan.app */;
+			productReference = 12760A0928390037000C88F3 /* SimpleMathScan Debug Green Camera.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -297,8 +297,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.debugGreenCamera;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -316,8 +316,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.releaseGreenCamera;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -396,8 +396,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.debugGreenRoll;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,8 +476,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.debugRedCamera;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -556,8 +556,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.debugRedRoll;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -630,8 +630,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.releaseGreenRoll;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -704,8 +704,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.releaseRedCamera;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -778,8 +778,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kjem.demoapps.SimpleMathScan.releaseRedRoll;
+				PRODUCT_NAME = "$(TARGET_NAME) $(CONFIGURATION)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
