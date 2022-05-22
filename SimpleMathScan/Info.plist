@@ -64,5 +64,9 @@
 	</array>
 	<key>Configuration</key>
 	<string>$(CONFIGURATION)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>To take photos to scan for arithmetic expressions</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To access photos to scan for arithmetic expressions</string>
 </dict>
 </plist>
