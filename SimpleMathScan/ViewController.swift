@@ -67,6 +67,8 @@ extension ViewController: UIImagePickerControllerDelegate {
         // Instantiate TextRecognizer to scan text from the image
         let recognizer = TextRecognizer(withImage: cgImage)
         print(recognizer.text)
+        MathParser.parseArithmetic(fromText: recognizer.text)
+        
         self.dismiss(animated: true, completion: nil)
     }
 }
