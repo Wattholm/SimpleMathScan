@@ -18,8 +18,14 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>Configuration</key>
+	<string>$(CONFIGURATION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>To take photos to scan for arithmetic expressions</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>To access photos to scan for arithmetic expressions</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -62,11 +68,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>Configuration</key>
-	<string>$(CONFIGURATION)</string>
-	<key>NSCameraUsageDescription</key>
-	<string>To take photos to scan for arithmetic expressions</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>To access photos to scan for arithmetic expressions</string>
 </dict>
 </plist>
