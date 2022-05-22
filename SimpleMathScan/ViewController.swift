@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     let appFunction = BuildConfig.shared.appFunction
     
     @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var inputImageView: UIImageView!
+    @IBOutlet weak var expressionTextfield: UITextField!
+    @IBOutlet weak var resultTextField: UITextField!
     
     @IBAction func actionButtonTapped(_ sender: UIButton) {
         if appFunction == .camera {
@@ -24,6 +27,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        expressionTextfield.isUserInteractionEnabled = false
+        resultTextField.isUserInteractionEnabled = false
         setActionButtonText()
     }
 
@@ -59,15 +64,22 @@ class ViewController: UIViewController {
 
 extension ViewController: UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let cgImage = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage)?.cgImage else {
+        guard
+            let inputImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
+            let cgImage = inputImage.cgImage
+        else {
             print("Error selecting photo.")
             return
         }
-        
+
+        // Set the imageView with the input image
+        inputImageView.image = inputImage
+
         // Instantiate TextRecognizer to scan text from the image
         let recognizer = TextRecognizer(withImage: cgImage)
-        print(recognizer.text)
-        MathParser.parseArithmetic(fromText: recognizer.text)
+        let parsedValues = MathParser.parseArithmetic(fromText: recognizer.text)
+        expressionTextfield.text = parsedValues?.expression
+        resultTextField.text = parsedValues?.result
         
         self.dismiss(animated: true, completion: nil)
     }
