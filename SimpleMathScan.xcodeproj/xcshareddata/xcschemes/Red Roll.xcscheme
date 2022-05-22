@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "12760A0828390037000C88F3"
-               BuildableName = "SimpleMathScan.app"
+               BuildableName = "SimpleMathScan Release Green Camera.app"
                BlueprintName = "SimpleMathScan"
                ReferencedContainer = "container:SimpleMathScan.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "12760A0828390037000C88F3"
-            BuildableName = "SimpleMathScan.app"
+            BuildableName = "SimpleMathScan Release Green Camera.app"
             BlueprintName = "SimpleMathScan"
             ReferencedContainer = "container:SimpleMathScan.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "12760A0828390037000C88F3"
-            BuildableName = "SimpleMathScan.app"
+            BuildableName = "SimpleMathScan Release Green Camera.app"
             BlueprintName = "SimpleMathScan"
             ReferencedContainer = "container:SimpleMathScan.xcodeproj">
          </BuildableReference>
