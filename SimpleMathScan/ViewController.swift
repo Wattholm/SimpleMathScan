@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Vision
+import VisionKit
 
 class ViewController: UIViewController {
     
@@ -41,13 +41,10 @@ class ViewController: UIViewController {
     }
     
     private func openCamera() {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera
-            imagePicker.allowsEditing = false
-            present(imagePicker, animated: true)
-        }
+        // Using VNDocumentCameraViewController() instead of UIImagePickerController() for the camera as the latter's text recognition is of poor quality
+        let documentCameraViewController = VNDocumentCameraViewController()
+        documentCameraViewController.delegate = self
+        present(documentCameraViewController, animated: true)
     }
     
     // Since iOS 11, read access to the photo library via UIImagePickerController() no longer requires the user to grant explicit permission
@@ -59,22 +56,14 @@ class ViewController: UIViewController {
             imagePicker.allowsEditing = false
             present(imagePicker, animated: true)
         }
-    }    
-}
-
-extension ViewController: UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard
-            let inputImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage,
-            let cgImage = inputImage.cgImage
-        else {
-            print("Error selecting photo.")
-            return
-        }
+    }
+    
+    private func processImage(inputImage: UIImage) {
+        guard let cgImage = inputImage.cgImage else { return }
 
         // Set the imageView with the input image
         inputImageView.image = inputImage
-
+        
         // Instantiate TextRecognizer to scan text from the image
         let recognizer = TextRecognizer(withImage: cgImage)
         let parsedValues = MathParser.parseArithmetic(fromText: recognizer.text)
@@ -85,6 +74,25 @@ extension ViewController: UIImagePickerControllerDelegate {
     }
 }
 
-extension ViewController: UINavigationControllerDelegate {
-    
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard
+            let inputImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        else {
+            print("Error selecting photo.")
+            return
+        }
+        
+        processImage(inputImage: inputImage)
+    }
+}
+
+extension ViewController: VNDocumentCameraViewControllerDelegate {
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        controller.dismiss(animated: true) {
+            // Currently there does not seem to be a way to limit the number of scans, so only the last one is processed
+            let image = scan.imageOfPage(at: scan.pageCount - 1)
+            self.processImage(inputImage: image)
+        }
+    }
 }
