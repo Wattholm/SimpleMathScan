@@ -14,18 +14,9 @@ enum AppTheme {
     var mainColor: UIColor {
         switch self {
         case .red:
-            return UIColor.red
+            return UIColor(red: 127.5/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         case .green:
-            return UIColor.green
-        }
-    }
-    
-    var backgroundColor: UIColor {
-        switch self {
-        case .red:
-            return UIColor.systemPink
-        case .green:
-            return UIColor.green
+            return UIColor(red: 0.0/255.0, green: 127.5/255.0, blue: 0.0/255.0, alpha: 1.0)
         }
     }
     
@@ -43,15 +34,16 @@ struct ThemeManager {
     static func applyTheme(theme: AppTheme) {
         UINavigationBar.appearance().barStyle = theme.navBarStyle
         UIButton.appearance().cornerRadius = 16
+        UIButton.appearance().tintColor = .white
         UIButton.appearance().backgroundColor = theme.mainColor
+        UITextField.appearance().textColor = .white
         UITextField.appearance().backgroundColor = theme.mainColor
-    }
-    
-}
-
-extension UIButton {
-    @objc dynamic var cornerRadius: CGFloat {
-        get { return layer.cornerRadius }
-        set (newValue) { layer.cornerRadius = newValue }
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = theme.mainColor
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
 }

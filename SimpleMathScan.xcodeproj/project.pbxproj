@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1234D92E2842133B006E8D3D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234D92D2842133B006E8D3D /* Theme.swift */; };
+		1234D93028423290006E8D3D /* UIButton+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234D92F28423290006E8D3D /* UIButton+CornerRadius.swift */; };
 		124C5CFB283A4CA7000F7711 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */; };
 		124C5CFD283A5DED000F7711 /* MathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5CFC283A5DED000F7711 /* MathParser.swift */; };
 		124C5CFF283A777A000F7711 /* NSRegularExpression+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1234D92D2842133B006E8D3D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		1234D92F28423290006E8D3D /* UIButton+CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+CornerRadius.swift"; sourceTree = "<group>"; };
 		124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		124C5CFC283A5DED000F7711 /* MathParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathParser.swift; sourceTree = "<group>"; };
 		124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Extensions.swift"; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */,
 				124C5CFC283A5DED000F7711 /* MathParser.swift */,
 				124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */,
+				1234D92F28423290006E8D3D /* UIButton+CornerRadius.swift */,
 				12760A1228390037000C88F3 /* Main.storyboard */,
 				12760A1528390037000C88F3 /* Assets.xcassets */,
 				12760A1728390037000C88F3 /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1234D92E2842133B006E8D3D /* Theme.swift in Sources */,
+				1234D93028423290006E8D3D /* UIButton+CornerRadius.swift in Sources */,
 				12760A1128390037000C88F3 /* ViewController.swift in Sources */,
 				12760A0D28390037000C88F3 /* AppDelegate.swift in Sources */,
 				124C5CFD283A5DED000F7711 /* MathParser.swift in Sources */,
@@ -309,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -408,6 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -488,6 +495,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,6 +576,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -642,6 +651,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -716,6 +726,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -790,6 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9V37J2YB3S;
 				INFOPLIST_FILE = SimpleMathScan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
