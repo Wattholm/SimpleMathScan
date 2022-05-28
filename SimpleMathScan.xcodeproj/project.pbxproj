@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1234D92E2842133B006E8D3D /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1234D92D2842133B006E8D3D /* Theme.swift */; };
 		124C5CFB283A4CA7000F7711 /* TextRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */; };
 		124C5CFD283A5DED000F7711 /* MathParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5CFC283A5DED000F7711 /* MathParser.swift */; };
 		124C5CFF283A777A000F7711 /* NSRegularExpression+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1234D92D2842133B006E8D3D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizer.swift; sourceTree = "<group>"; };
 		124C5CFC283A5DED000F7711 /* MathParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathParser.swift; sourceTree = "<group>"; };
 		124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+Extensions.swift"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				12760A0C28390037000C88F3 /* AppDelegate.swift */,
 				12DCB96928390C6B00B10393 /* BuildConfig.swift */,
 				12760A0E28390037000C88F3 /* SceneDelegate.swift */,
+				1234D92D2842133B006E8D3D /* Theme.swift */,
 				12760A1028390037000C88F3 /* ViewController.swift */,
 				124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */,
 				124C5CFC283A5DED000F7711 /* MathParser.swift */,
@@ -149,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1234D92E2842133B006E8D3D /* Theme.swift in Sources */,
 				12760A1128390037000C88F3 /* ViewController.swift in Sources */,
 				12760A0D28390037000C88F3 /* AppDelegate.swift in Sources */,
 				124C5CFD283A5DED000F7711 /* MathParser.swift in Sources */,

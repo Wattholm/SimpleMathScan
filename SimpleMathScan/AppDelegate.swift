@@ -13,8 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
+        ThemeManager.applyTheme(theme: BuildConfig.shared.appTheme)
         print("Current configuration: \(BuildConfig.shared.environment.rawValue)")
+        print("Current theme: \(BuildConfig.shared.appTheme)")
+
         return true
     }
 

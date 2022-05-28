@@ -27,16 +27,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
+
+    private func setup() {
+        title = "Math Scan"
+        inputImageView.layer.borderWidth = 2
+        inputImageView.layer.borderColor = BuildConfig.shared.appTheme.mainColor.cgColor
         expressionTextfield.isUserInteractionEnabled = false
         resultTextField.isUserInteractionEnabled = false
         setActionButtonText()
     }
-
+    
     private func setActionButtonText() {
         if BuildConfig.shared.appFunction == .camera {
-            actionButton.setTitle("Take Photo", for: .normal)
+            actionButton.setTitle(" Take Photo ", for: .normal)
         } else {
-            actionButton.setTitle("Choose Photo", for: .normal)
+            actionButton.setTitle(" Choose Photo ", for: .normal)
         }
     }
     

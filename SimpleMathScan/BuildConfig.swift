@@ -25,11 +25,6 @@ class BuildConfig {
         case roll
     }
 
-    enum AppTheme {
-        case red
-        case green
-    }
-
     static let shared = BuildConfig()
     
     let environment: Environment
