@@ -14,7 +14,7 @@
 		124C5CFF283A777A000F7711 /* NSRegularExpression+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */; };
 		12760A0D28390037000C88F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760A0C28390037000C88F3 /* AppDelegate.swift */; };
 		12760A0F28390037000C88F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760A0E28390037000C88F3 /* SceneDelegate.swift */; };
-		12760A1128390037000C88F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760A1028390037000C88F3 /* ViewController.swift */; };
+		12760A1128390037000C88F3 /* MathScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12760A1028390037000C88F3 /* MathScanViewController.swift */; };
 		12760A1428390037000C88F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12760A1228390037000C88F3 /* Main.storyboard */; };
 		12760A1628390037000C88F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12760A1528390037000C88F3 /* Assets.xcassets */; };
 		12760A1928390037000C88F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12760A1728390037000C88F3 /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		12760A0928390037000C88F3 /* SimpleMathScan Debug Green Camera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleMathScan Debug Green Camera.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12760A0C28390037000C88F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12760A0E28390037000C88F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		12760A1028390037000C88F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		12760A1028390037000C88F3 /* MathScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathScanViewController.swift; sourceTree = "<group>"; };
 		12760A1328390037000C88F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12760A1528390037000C88F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12760A1828390037000C88F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 				12DCB96928390C6B00B10393 /* BuildConfig.swift */,
 				12760A0E28390037000C88F3 /* SceneDelegate.swift */,
 				1234D92D2842133B006E8D3D /* Theme.swift */,
-				12760A1028390037000C88F3 /* ViewController.swift */,
+				12760A1028390037000C88F3 /* MathScanViewController.swift */,
 				124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */,
 				124C5CFC283A5DED000F7711 /* MathParser.swift */,
 				124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */,
@@ -157,7 +157,7 @@
 			files = (
 				1234D92E2842133B006E8D3D /* Theme.swift in Sources */,
 				1234D93028423290006E8D3D /* UIButton+CornerRadius.swift in Sources */,
-				12760A1128390037000C88F3 /* ViewController.swift in Sources */,
+				12760A1128390037000C88F3 /* MathScanViewController.swift in Sources */,
 				12760A0D28390037000C88F3 /* AppDelegate.swift in Sources */,
 				124C5CFD283A5DED000F7711 /* MathParser.swift in Sources */,
 				124C5CFB283A4CA7000F7711 /* TextRecognizer.swift in Sources */,

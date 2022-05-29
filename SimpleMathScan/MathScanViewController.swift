@@ -8,7 +8,7 @@
 import UIKit
 import VisionKit
 
-class ViewController: UIViewController {
+class MathScanViewController: UIViewController {
     
     let appFunction = BuildConfig.shared.appFunction
     
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension MathScanViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard
             let inputImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
@@ -94,7 +94,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
     }
 }
 
-extension ViewController: VNDocumentCameraViewControllerDelegate {
+extension MathScanViewController: VNDocumentCameraViewControllerDelegate {
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
         controller.dismiss(animated: true) {
             // Currently there does not seem to be a way to limit the number of scans, so only the last one is processed

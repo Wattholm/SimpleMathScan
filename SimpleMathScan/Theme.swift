@@ -32,13 +32,14 @@ enum AppTheme {
 
 struct ThemeManager {
     static func applyTheme(theme: AppTheme) {
-        UINavigationBar.appearance().barStyle = theme.navBarStyle
-        UIButton.appearance().cornerRadius = 16
-        UIButton.appearance().tintColor = .white
-        UIButton.appearance().backgroundColor = theme.mainColor
-        UITextField.appearance().textColor = .white
-        UITextField.appearance().backgroundColor = theme.mainColor
-        
+        UINavigationBar.appearance(whenContainedInInstancesOf: [MathScanViewController.self]).barStyle = theme.navBarStyle
+        UIButton.appearance(whenContainedInInstancesOf: [MathScanViewController.self]).cornerRadius = 16
+        UIButton.appearance(whenContainedInInstancesOf: [MathScanViewController.self]).tintColor = .white
+        UIButton.appearance(whenContainedInInstancesOf: [MathScanViewController.self]).backgroundColor = theme.mainColor
+        UITextField.appearance(whenContainedInInstancesOf: [MathScanViewController.self]).textColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [MathScanViewController.self]).backgroundColor = theme.mainColor
+
+        // Reverts navigation bar behavior to pre-Xcode 13, to allow setting the background color
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
