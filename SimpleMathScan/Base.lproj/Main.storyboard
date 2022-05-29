@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vBh-nM-CNa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MathScanViewController" customModule="SimpleMathScan_Debug_Green_Camera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCW-j7-hZt">
-                                <rect key="frame" x="237.5" y="559" width="125" height="41"/>
+                                <rect key="frame" x="144.5" y="821" width="125" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="6Jy-mF-rel"/>
                                 </constraints>
@@ -27,10 +28,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3vs-t2-Ia2">
-                                <rect key="frame" x="20" y="231" width="560" height="299"/>
+                                <rect key="frame" x="20" y="275" width="374" height="517"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expression from Input:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN3-Tm-asC">
-                                <rect key="frame" x="20" y="59" width="171" height="21"/>
+                                <rect key="frame" x="20" y="103" width="171" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="XML-NS-OPg"/>
                                 </constraints>
@@ -39,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pD-HC-gd7">
-                                <rect key="frame" x="20" y="89" width="560" height="34"/>
+                                <rect key="frame" x="20" y="133" width="374" height="34"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
@@ -50,7 +51,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ti-QN-Vpm">
-                                <rect key="frame" x="20" y="139" width="52" height="21"/>
+                                <rect key="frame" x="20" y="183" width="52" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="JAh-uF-mxm"/>
                                 </constraints>
@@ -59,7 +60,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYT-j6-2Gv">
-                                <rect key="frame" x="20" y="168" width="560" height="34"/>
+                                <rect key="frame" x="20" y="212" width="374" height="34"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
@@ -78,9 +79,11 @@
                             <constraint firstItem="4Ti-QN-Vpm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8WC-VS-MA8"/>
                             <constraint firstItem="3vs-t2-Ia2" firstAttribute="top" secondItem="XYT-j6-2Gv" secondAttribute="bottom" constant="29" id="IkA-R9-MJr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6pD-HC-gd7" secondAttribute="trailing" constant="20" id="VD2-js-SFz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4Ti-QN-Vpm" secondAttribute="trailing" constant="20" id="YAf-4M-2V0"/>
                             <constraint firstItem="3vs-t2-Ia2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a5d-oW-WYK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3vs-t2-Ia2" secondAttribute="trailing" constant="20" id="eQe-Vd-nPY"/>
                             <constraint firstItem="XYT-j6-2Gv" firstAttribute="top" secondItem="4Ti-QN-Vpm" secondAttribute="bottom" constant="8" symbolic="YES" id="jHO-Am-LqA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YN3-Tm-asC" secondAttribute="trailing" constant="20" id="joQ-dq-Ref"/>
                             <constraint firstItem="YN3-Tm-asC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="mX8-8B-uzg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XYT-j6-2Gv" secondAttribute="trailing" constant="20" id="nJM-4S-Z3C"/>
                             <constraint firstItem="6pD-HC-gd7" firstAttribute="top" secondItem="YN3-Tm-asC" secondAttribute="bottom" constant="9" id="rIP-8m-P1g"/>

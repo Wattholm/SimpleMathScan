@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import Combine
 import VisionKit
 
 class MathScanViewController: UIViewController {
-    
-    let appFunction = BuildConfig.shared.appFunction
+    private let appFunction = BuildConfig.shared.appFunction
+    private var cancellables: [AnyCancellable] = []
+    private let viewModel: MathScanViewModelType = MathScanViewModel(
+        mathScanner: MathScanner(textRecognizer: TextRecognizer())
+    )
+    private let photoReceived = PassthroughSubject<UIImage?, Never>()
     
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var inputImageView: UIImageView!
@@ -27,16 +32,30 @@ class MathScanViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
+        setupUI()
+        bindToViewModel()
     }
 
-    private func setup() {
+    private func setupUI() {
         title = "Math Scan"
         inputImageView.layer.borderWidth = 2
         inputImageView.layer.borderColor = BuildConfig.shared.appTheme.mainColor.cgColor
         expressionTextfield.isUserInteractionEnabled = false
         resultTextField.isUserInteractionEnabled = false
         setActionButtonText()
+    }
+    
+    private func bindToViewModel() {
+        cancellables.forEach { $0.cancel() }
+        cancellables.removeAll()
+        let input = MathScanViewModelInput(photoReceived: photoReceived.eraseToAnyPublisher())
+        let output = viewModel.transform(input: input)
+
+        output.sink(receiveValue: {[unowned self] state in
+            expressionTextfield.text = state.expression
+            resultTextField.text = state.result
+            inputImageView.image = state.scannedImage
+        }).store(in: &cancellables)
     }
     
     private func setActionButtonText() {
@@ -63,22 +82,7 @@ class MathScanViewController: UIViewController {
             imagePicker.allowsEditing = false
             present(imagePicker, animated: true)
         }
-    }
-    
-    private func processImage(inputImage: UIImage) {
-        guard let cgImage = inputImage.cgImage else { return }
-
-        // Set the imageView with the input image
-        inputImageView.image = inputImage
-        
-        // Instantiate TextRecognizer to scan text from the image
-        let recognizer = TextRecognizer(withImage: cgImage)
-        let parsedValues = MathParser.parseArithmetic(fromText: recognizer.text)
-        expressionTextfield.text = parsedValues?.expression
-        resultTextField.text = parsedValues?.result
-        
-        self.dismiss(animated: true, completion: nil)
-    }
+    }    
 }
 
 extension MathScanViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -90,7 +94,8 @@ extension MathScanViewController: UIImagePickerControllerDelegate, UINavigationC
             return
         }
         
-        processImage(inputImage: inputImage)
+        self.dismiss(animated: true, completion: nil)
+        photoReceived.send(inputImage)
     }
 }
 
@@ -99,7 +104,8 @@ extension MathScanViewController: VNDocumentCameraViewControllerDelegate {
         controller.dismiss(animated: true) {
             // Currently there does not seem to be a way to limit the number of scans, so only the last one is processed
             let image = scan.imageOfPage(at: scan.pageCount - 1)
-            self.processImage(inputImage: image)
+            self.dismiss(animated: true, completion: nil)
+            self.photoReceived.send(image)
         }
     }
 }

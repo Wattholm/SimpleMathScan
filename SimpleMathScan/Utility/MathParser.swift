@@ -7,7 +7,11 @@
 
 import Foundation
 
-class MathParser {
+protocol MathParseCapable {
+    static func parseArithmetic(fromText text: [String]) -> (expression: String, result: String)?
+}
+
+class MathParser: MathParseCapable {
     
     enum Operand {
         case plus

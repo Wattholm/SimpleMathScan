@@ -7,13 +7,16 @@
 
 import Vision
 
-class TextRecognizer {
+protocol TextRecognizerType {
+    var text: [String] {get}
+    
+    func recognizeTextHandler(request: VNRequest, error: Error?)
+    func requestFromImage(cgImage: CGImage)
+}
+
+class TextRecognizer: TextRecognizerType {
     var text: [String] = []
 
-    init(withImage cgImage: CGImage) {
-        requestFromImage(cgImage: cgImage)
-    }
-    
     func requestFromImage(cgImage: CGImage) {
         // Create a new image-request handler.
         let requestHandler = VNImageRequestHandler(cgImage: cgImage)
@@ -31,7 +34,7 @@ class TextRecognizer {
         }
     }
 
-    private func recognizeTextHandler(request: VNRequest, error: Error?) {
+    internal func recognizeTextHandler(request: VNRequest, error: Error?) {
         guard let observations =
                 request.results as? [VNRecognizedTextObservation] else {
             return
