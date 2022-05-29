@@ -37,7 +37,7 @@ class MathScanViewController: UIViewController {
     }
 
     private func setupUI() {
-        title = viewModel.title
+        title = viewModel.titleText
         inputImageView.layer.borderWidth = 2
         inputImageView.layer.borderColor = BuildConfig.shared.appTheme.mainColor.cgColor
         expressionTextfield.isUserInteractionEnabled = false
