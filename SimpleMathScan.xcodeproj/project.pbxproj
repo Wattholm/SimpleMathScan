@@ -18,6 +18,8 @@
 		12760A1428390037000C88F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12760A1228390037000C88F3 /* Main.storyboard */; };
 		12760A1628390037000C88F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12760A1528390037000C88F3 /* Assets.xcassets */; };
 		12760A1928390037000C88F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12760A1728390037000C88F3 /* LaunchScreen.storyboard */; };
+		12B3EF542843412A00308CCB /* MathScanViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3EF532843412A00308CCB /* MathScanViewModelType.swift */; };
+		12B3EF562843450300308CCB /* MathParserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B3EF552843450300308CCB /* MathParserViewModel.swift */; };
 		12DCB96A28390C6B00B10393 /* BuildConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DCB96928390C6B00B10393 /* BuildConfig.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,8 @@
 		12760A1528390037000C88F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12760A1828390037000C88F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12760A1A28390037000C88F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12B3EF532843412A00308CCB /* MathScanViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathScanViewModelType.swift; sourceTree = "<group>"; };
+		12B3EF552843450300308CCB /* MathParserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathParserViewModel.swift; sourceTree = "<group>"; };
 		12DCB96928390C6B00B10393 /* BuildConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,8 +76,10 @@
 				12DCB96928390C6B00B10393 /* BuildConfig.swift */,
 				12760A0E28390037000C88F3 /* SceneDelegate.swift */,
 				1234D92D2842133B006E8D3D /* Theme.swift */,
+				12B3EF532843412A00308CCB /* MathScanViewModelType.swift */,
 				12760A1028390037000C88F3 /* MathScanViewController.swift */,
 				124C5CFA283A4CA7000F7711 /* TextRecognizer.swift */,
+				12B3EF552843450300308CCB /* MathParserViewModel.swift */,
 				124C5CFC283A5DED000F7711 /* MathParser.swift */,
 				124C5CFE283A777A000F7711 /* NSRegularExpression+Extensions.swift */,
 				1234D92F28423290006E8D3D /* UIButton+CornerRadius.swift */,
@@ -160,8 +166,10 @@
 				12760A1128390037000C88F3 /* MathScanViewController.swift in Sources */,
 				12760A0D28390037000C88F3 /* AppDelegate.swift in Sources */,
 				124C5CFD283A5DED000F7711 /* MathParser.swift in Sources */,
+				12B3EF542843412A00308CCB /* MathScanViewModelType.swift in Sources */,
 				124C5CFB283A4CA7000F7711 /* TextRecognizer.swift in Sources */,
 				124C5CFF283A777A000F7711 /* NSRegularExpression+Extensions.swift in Sources */,
+				12B3EF562843450300308CCB /* MathParserViewModel.swift in Sources */,
 				12DCB96A28390C6B00B10393 /* BuildConfig.swift in Sources */,
 				12760A0F28390037000C88F3 /* SceneDelegate.swift in Sources */,
 			);
