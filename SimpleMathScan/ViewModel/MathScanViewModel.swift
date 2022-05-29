@@ -23,6 +23,9 @@ protocol MathScanViewModelType {
 final class MathScanViewModel: MathScanViewModelType {
     private var cancellables: [AnyCancellable] = []
     private let mathScanner: MathScannerType
+    let titleText = "Math Scan"
+    let takePhotoText = " Take Photo "
+    let choosePhotoText = " Choose Photo "
 
     init(mathScanner: MathScannerType) {
         self.mathScanner = mathScanner

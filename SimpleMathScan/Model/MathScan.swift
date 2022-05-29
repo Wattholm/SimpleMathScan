@@ -27,9 +27,11 @@ protocol MathScannerType {
 
 struct MathScanner: MathScannerType {
     let textRecognizer: TextRecognizerType
+    let mathParser: MathParseCapable
     
-    init(textRecognizer: TextRecognizerType) {
+    init(textRecognizer: TextRecognizerType, mathParser: MathParseCapable) {
         self.textRecognizer = textRecognizer
+        self.mathParser = mathParser
     }
     
     internal func scanMath(from inputImage: UIImage) -> AnyPublisher<MathScan, Never> {
@@ -40,7 +42,7 @@ struct MathScanner: MathScannerType {
         // Instantiate TextRecognizer to scan text from the image
         textRecognizer.requestFromImage(cgImage: cgImage)
         
-        guard let parsedValues = MathParser.parseArithmetic(fromText: textRecognizer.text) else {
+        guard let parsedValues = mathParser.parseArithmetic(fromText: textRecognizer.text) else {
             return .just(MathScan(expression: "Not found", result: "N/A", scannedImage: nil))
         }
         

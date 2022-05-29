@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MathParseCapable {
-    static func parseArithmetic(fromText text: [String]) -> (expression: String, result: String)?
+    func parseArithmetic(fromText text: [String]) -> (expression: String, result: String)?
 }
 
 class MathParser: MathParseCapable {
@@ -20,7 +20,10 @@ class MathParser: MathParseCapable {
         case divide
     }
     
-    static func parseArithmetic(fromText text: [String]) -> (expression: String, result: String)? {
+    /// Iterates through an array of strings to find the first valid 2-argument arithmetic expression
+    /// - Parameter text: input strings to iterate through
+    /// - Returns: a tuple of the first valid expression found and the calculated result
+    func parseArithmetic(fromText text: [String]) -> (expression: String, result: String)? {
         // Regular expression pattern matches a number followed by an operator, followed by another number
         // Operators include: /*+- as well as other variations of the multiplication and division symbols
         let regex = NSRegularExpression("[0-9]+\\.*[0-9]*\\s*[\\*/+÷·×xX－-]\\s*[0-9]+\\.*[0-9]*")
@@ -92,7 +95,7 @@ class MathParser: MathParseCapable {
         }
     }
     
-    static func compute(number1: Float, operand: Operand, number2: Float) throws -> String? {
+    internal func compute(number1: Float, operand: Operand, number2: Float) throws -> String? {
         switch operand {
         case .plus:
             return String(number1 + number2)

@@ -12,8 +12,8 @@ import VisionKit
 class MathScanViewController: UIViewController {
     private let appFunction = BuildConfig.shared.appFunction
     private var cancellables: [AnyCancellable] = []
-    private let viewModel: MathScanViewModelType = MathScanViewModel(
-        mathScanner: MathScanner(textRecognizer: TextRecognizer())
+    private let viewModel = MathScanViewModel(
+        mathScanner: MathScanner(textRecognizer: TextRecognizer(), mathParser: MathParser())
     )
     private let photoReceived = PassthroughSubject<UIImage?, Never>()
     
@@ -37,7 +37,7 @@ class MathScanViewController: UIViewController {
     }
 
     private func setupUI() {
-        title = "Math Scan"
+        title = viewModel.title
         inputImageView.layer.borderWidth = 2
         inputImageView.layer.borderColor = BuildConfig.shared.appTheme.mainColor.cgColor
         expressionTextfield.isUserInteractionEnabled = false
@@ -60,9 +60,9 @@ class MathScanViewController: UIViewController {
     
     private func setActionButtonText() {
         if BuildConfig.shared.appFunction == .camera {
-            actionButton.setTitle(" Take Photo ", for: .normal)
+            actionButton.setTitle(viewModel.takePhotoText, for: .normal)
         } else {
-            actionButton.setTitle(" Choose Photo ", for: .normal)
+            actionButton.setTitle(viewModel.choosePhotoText, for: .normal)
         }
     }
     
